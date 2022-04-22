@@ -61,7 +61,7 @@ module.exports = {
                 city_id SERIAL PRIMARY KEY,
                 name VARCHAR,
                 rating INTEGER,
-                country_id INTEGER
+                country_id INTEGER references countries(country_id)
             );
 
             INSERT INTO cities (name, rating, country_id)
